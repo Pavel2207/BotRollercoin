@@ -1,0 +1,36 @@
+import pyautogui
+import time
+
+time.sleep(5)
+
+region = (550,250,1000,750)
+
+while True:
+    try:
+        location = pyautogui.locateOnScreen('photo5.jpg',confidence=0.35, region=region)
+        centr = pyautogui.center(location)
+        pyautogui.click(centr)
+    except:
+        pass
+
+    try:
+        location6 = pyautogui.locateOnScreen('photo6.jpg',confidence=0.35,region=region)
+        centr6 = pyautogui.center(location6)
+        pyautogui.click(centr6)
+    except:
+        pass
+
+    try:
+        location7 = pyautogui.locateOnScreen('photo7.jpg',confidence=0.35,region=region)
+        centr7 = pyautogui.center(location7)
+        pyautogui.click(centr7)
+    except:
+        pass
+
+    try:
+        location9 = pyautogui.locateOnScreen('photo9.jpg',confidence=0.5,region=(550,550,900,550)) # нажимиаем рестарт 
+        centr9 = pyautogui.center(location9)
+        pyautogui.click(centr9)
+    except:
+        pass
+
